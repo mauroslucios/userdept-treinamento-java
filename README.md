@@ -22,3 +22,9 @@ Tecnoloagias:
 - devtools
 - web;
 - lombok
+
+## Imagens
+
+![usuraios_departamentos](https://user-images.githubusercontent.com/671694/147854640-e8e25bdf-4a0e-4f47-9119-352266980fa7.jpg)
+
+![java](https://user-images.githubusercontent.com/671694/147854651-cb185a41-2441-4cd9-af92-c3faf4b00299.jpg)
