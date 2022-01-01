@@ -6,9 +6,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
+import lombok.Getter;
 
-@Data
+@Getter
 @Entity
 @Table(name="tb_department")
 public class Department {

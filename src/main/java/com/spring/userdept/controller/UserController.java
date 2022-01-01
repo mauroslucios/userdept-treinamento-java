@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping(value="/api")
-@Api(value="API Rest User")
+@Api(value="API Rest User/Department")
 @CrossOrigin(origins="*")
 public class UserController {
 
