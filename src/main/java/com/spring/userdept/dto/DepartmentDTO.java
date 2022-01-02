@@ -10,9 +10,11 @@ import lombok.Getter;
 @Getter
 public class DepartmentDTO {
 	
+	private Long id;
 	private String name;
 	
 	public DepartmentDTO(Department department) {
+		this.id = department.getId();
 		this.name = department.getName();
 	}
 	
