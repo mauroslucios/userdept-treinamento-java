@@ -23,7 +23,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping(value="/api")
+@RequestMapping(value="/api/v1")
 @Api(value="API Rest User/Department")
 @CrossOrigin(origins="*")
 public class DepartmentController {
@@ -53,13 +53,13 @@ public class DepartmentController {
 	}
 	
 	
-	@PutMapping("/department")
+	@PutMapping("/departments")
 	@ApiOperation(value="Atualiza um produto completo")
 	public Department updateDepartment(@RequestBody Department department) {
 		return departmentService.updateDepartment(department);
 	}
 	
-	@DeleteMapping("/department/{id}")
+	@DeleteMapping("/departments/{id}")
 	@ApiOperation(value="Delta um departamento pelo id")
 	public void deleteDepartment(@PathVariable Long id) {
 		departmentService.deleteDepartment(id);
