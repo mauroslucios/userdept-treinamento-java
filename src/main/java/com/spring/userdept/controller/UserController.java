@@ -24,7 +24,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 @RestController
-@RequestMapping(value="/api")
+@RequestMapping(value="/api/v1")
 @Api(value="API Rest User/Department")
 @CrossOrigin(origins="*")
 public class UserController {
@@ -47,14 +47,14 @@ public class UserController {
 	}
 	
 	@ResponseStatus(HttpStatus.CREATED)
-	@PostMapping("/user")
+	@PostMapping("/users")
 	@ApiOperation(value="Salva um produto no banco")
 	public User insertUser(@RequestBody User user) {
 		return userService.insertUser(user);
 	}
 	
 	
-	@PutMapping("/user")
+	@PutMapping("/users")
 	@ApiOperation(value="Atualiza um produto pelo id")
 	public User updateProduto(@RequestBody User user) {
 		return userService.updateUser(user);
