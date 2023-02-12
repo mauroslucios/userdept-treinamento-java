@@ -6,8 +6,10 @@ import java.util.stream.Collectors;
 import com.spring.userdept.model.Department;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class DepartmentDTO {
 	
 	private Long id;
