@@ -18,14 +18,21 @@ Tecnoloagias:
 - spring;
 - jpa;
 - swagger;
+- mysql dockerizado;
 - postgresql;
 - devtools
 - web;
 - lombok
 
+## Url swagger
+-http://localhost:8080/swagger-ui.html
+
 ## Imagens
 
 ![usuraios_departamentos](https://user-images.githubusercontent.com/671694/147854640-e8e25bdf-4a0e-4f47-9119-352266980fa7.jpg)
+
+![Captura de tela de 2023-02-12 13-54-12](https://user-images.githubusercontent.com/671694/218325069-2a62d1dd-2071-40b4-b629-5510e87af7ef.png)
+
 
 ![java](https://user-images.githubusercontent.com/671694/147854651-cb185a41-2441-4cd9-af92-c3faf4b00299.jpg)
 
