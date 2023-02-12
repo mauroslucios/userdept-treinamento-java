@@ -27,6 +27,11 @@ Tecnoloagias:
 ## Url swagger
 -http://localhost:8080/swagger-ui.html
 
+
+## querys
+- insert into tb_user values(null,'funcionario1@email.com','funcionario 1',4);
+- select u.id as codigo, u.email as 'email funcionario', u.name as 'nome funcionario', d.name as 'departamento trabalha', d.id as 'codigo
+ departamento' from tb_user as u  inner join tb_department as d on u.department_id = d.id;
 ## Imagens
 
 ![usuraios_departamentos](https://user-images.githubusercontent.com/671694/147854640-e8e25bdf-4a0e-4f47-9119-352266980fa7.jpg)
