@@ -1,0 +1,1 @@
+java -jar -Dspring.profiles.active=mysql /usr/userdept-treinamento-java/target/userdept*.jar
