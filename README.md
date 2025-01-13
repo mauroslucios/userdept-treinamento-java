@@ -26,7 +26,7 @@ Tecnoloagias:
 
 ## Url swagger
 -http://localhost:8080/swagger-ui.html
-## teste alessandro
+
 
 ## querys
 - insert into tb_user values(null,'funcionario1@email.com','funcionario 1',4);
