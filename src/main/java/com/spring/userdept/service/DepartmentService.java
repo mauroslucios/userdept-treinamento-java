@@ -13,7 +13,7 @@ import com.spring.userdept.repository.DepartmentRepository;
 public class DepartmentService {
 	
 	@Autowired
-	DepartmentRepository departmentRepository;
+	private DepartmentRepository departmentRepository;
 
 	public List<DepartmentDTO> findAll() {
 		List<Department> list = departmentRepository.findAll();

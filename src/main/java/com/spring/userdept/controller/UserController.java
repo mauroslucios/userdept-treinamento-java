@@ -54,10 +54,11 @@ public class UserController {
 	}
 	
 	
-	@PutMapping("/users")
 	@ApiOperation(value="Atualiza um produto pelo id")
-	public User updateProduto(@RequestBody User user) {
-		return userService.updateUser(user);
+	@PutMapping("/users/{id}")
+	public User updateProduto(@PathVariable Long id, @RequestBody User user) {
+	    user.setId(id);
+	    return userService.updateUser(user);
 	}
 	
 	@DeleteMapping("/users/{id}")

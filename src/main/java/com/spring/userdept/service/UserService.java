@@ -13,7 +13,7 @@ import com.spring.userdept.repository.UserRepository;
 public class UserService {
 
 	@Autowired
-	UserRepository userRepository;
+	UserRepository userRepository = null;
 
 	public List<UserDTO> findAll() {
 		List<User> list = userRepository.findAll();
