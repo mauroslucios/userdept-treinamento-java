@@ -2,7 +2,6 @@ package com.spring.userdept.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -20,41 +19,43 @@ import com.spring.userdept.dto.UserDTO;
 import com.spring.userdept.model.User;
 import com.spring.userdept.service.UserService;
 
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping(value="/api/v1")
-@Api(value="API Rest User/Department")
+@Tag(name="API Rest User/Department")
 @CrossOrigin(origins="*")
 public class UserController {
 
-	@Autowired
-	private UserService userService;
+	private final UserService userService;
+	public UserController(UserService userService) {
+        this.userService = userService;
+    }
 	
 	@GetMapping("/users")
-	@ApiOperation(value="Retorna uma lista de usuários")
+	@Operation(summary ="Retorna uma lista de usuários")
 	public ResponseEntity<List<UserDTO>> findAll(){
 		List<UserDTO> list = userService.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 	
 	@GetMapping("/users/{id}")
-	@ApiOperation(value="Retorna apenas um usuário")
-	public User findOne(@PathVariable(value="id") Long id){
+	@Operation(summary ="Retorna apenas um usuário")
+	public User findOne(@PathVariable Long id){
 		User result = userService.findById(id);
 		return result;
 	}
 	
 	@ResponseStatus(HttpStatus.CREATED)
 	@PostMapping("/users")
-	@ApiOperation(value="Salva um produto no banco")
+	@Operation(summary ="Salva um produto no banco")
 	public User insertUser(@RequestBody User user) {
 		return userService.insertUser(user);
 	}
 	
 	
-	@ApiOperation(value="Atualiza um produto pelo id")
+	@Operation(summary ="Atualiza um produto pelo id")
 	@PutMapping("/users/{id}")
 	public User updateProduto(@PathVariable Long id, @RequestBody User user) {
 	    user.setId(id);
@@ -62,7 +63,7 @@ public class UserController {
 	}
 	
 	@DeleteMapping("/users/{id}")
-	@ApiOperation(value="Deleta um produto pelo id")
+	@Operation(summary ="Deleta um produto pelo id")
 	public void deleteUser(@PathVariable Long id) {
 		userService.deleteUser(id);
 	}

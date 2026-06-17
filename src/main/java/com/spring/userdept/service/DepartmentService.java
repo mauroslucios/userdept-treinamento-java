@@ -2,7 +2,6 @@ package com.spring.userdept.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.spring.userdept.dto.DepartmentDTO;
@@ -12,8 +11,11 @@ import com.spring.userdept.repository.DepartmentRepository;
 @Service
 public class DepartmentService {
 	
-	@Autowired
-	private DepartmentRepository departmentRepository;
+	
+	private final DepartmentRepository departmentRepository;
+	public DepartmentService(DepartmentRepository departmentRepository) {
+	    this.departmentRepository = departmentRepository;
+	}
 
 	public List<DepartmentDTO> findAll() {
 		List<Department> list = departmentRepository.findAll();
