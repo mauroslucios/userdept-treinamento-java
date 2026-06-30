@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.spring.userdept.dto.UserDTO;
-import com.spring.userdept.model.User;
+import com.spring.userdept.entities.User;
 import com.spring.userdept.repository.UserRepository;
 
 @Service
@@ -21,9 +21,15 @@ public class UserService {
 		return UserDTO.converter(list);
 	}
 
-	public User findById(Long id) {
-		return userRepository.findById(id).get();
+	public UserDTO findById(Long id){
+		User user = userRepository.findById(id)
+				.orElseThrow(()-> new ResourceNotFoundException(id));
+		return new UserDTO(user);
 	}
+
+	/*public User findById(Long id) {
+		return userRepository.findById(id).get();
+	}*/
 
 	public User insertUser(User user) {
 		return userRepository.save(user);
