@@ -1,11 +1,9 @@
 package com.spring.userdept.repository;
 
+import com.spring.userdept.entities.Pessoa;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.spring.userdept.entities.User;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long>{
-
+public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
 }
